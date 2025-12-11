@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Redirigiendo...</title>
+    <script>
+        // Coloca aquí los enlaces reales
+        const androidUrl = "https://play.google.com/store/apps/details?id=TU_APP";
+        const iosUrl = "https://apps.apple.com/app/idTU_APP";
+        const fallback = "https://tusitio.com";
+
+        const user = navigator.userAgent.toLowerCase();
+
+        if (user.includes("iphone") || user.includes("ipad") || user.includes("ipod")) {
+            window.location.href = iosUrl;
+        } else if (user.includes("android")) {
+            window.location.href = androidUrl;
+        } else {
+            window.location.href = fallback;
+        }
+    </script>
+</head>
+<body>
+    Redirigiendo...
+</body>
+</html>
